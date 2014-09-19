@@ -11,11 +11,11 @@
 |
 */
 
-Route::get('/', function() {
-    return View::make('hello');
-});
+//Route::get('/', function() {
+//    return View::make('hello');
+//});
 
-Route::get('users', function () {
+Route::get('users/{id}', function ($id) {
 //    phpinfo();
 //    $user = new User();
 //    $user->login = 'admin';
@@ -24,4 +24,7 @@ Route::get('users', function () {
 //    var_dump(Auth::attempt(array('login'=>'admin', 'password'=>'ntcn.pth')));
 //    var_dump(Auth::user()->password);
     return (Auth::guest()) ? 'guest' : 'user';
-});
+})->where(array('id' => '[0-9]+'));
+
+Route::get('/singin', 'AuthController@signIn');
+Route::get('/singup', 'AuthController@signUp');
