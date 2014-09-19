@@ -12,21 +12,22 @@
                 <header class="wrapper text-center">
                     <strong>{{ Lang::get('messages.auth.signin.title') }}</strong>
                 </header>
-                <form action="index.html">
+                {{ Form::open(array('url'=>'login')) }}
                     <div class="list-group">
                         <div class="list-group-item">
-                            <input type="text" placeholder="{{ Lang::get('messages.auth.signin.fields.login') }}" class="form-control no-border">
+                            {{ Form::text('login', null, array('class'=>'form-control no-border', 'placeholder' => Lang::get('messages.auth.signin.fields.login'))) }}
                         </div>
                         <div class="list-group-item">
-                            <input type="password" placeholder="{{ Lang::get('messages.auth.signin.fields.password') }}" class="form-control no-border">
+                            {{ Form::password('password', array('class'=>'form-control no-border', 'placeholder' => Lang::get('messages.auth.signin.fields.password'))) }}
                         </div>
                     </div>
-                    <button type="submit" class="btn btn-lg btn-primary btn-block">{{ Lang::get('messages.auth.signin.fields.buttonEnter') }}</button>
+
+                    {{ Form::submit(Lang::get('messages.auth.signin.fields.buttonEnter'), array('class'=>'btn btn-lg btn-primary btn-block'))}}
                     <div class="text-center m-t m-b"><a href="#"><small>{{ Lang::get('messages.auth.signin.fields.forgetPassword') }}</small></a></div>
                     <div class="line line-dashed"></div>
-                    <p class="text-muted text-center"><small>{{ Lang::get('messages.auth.signin.fields.noAccount') }}</small></p>
-                    <a href="{{ URL::to('/singup') }}" class="btn btn-lg btn-default btn-block">{{ Lang::get('messages.auth.signin.fields.buttonCreate') }}</a>
-                </form>
+                                        <p class="text-muted text-center"><small>{{ Lang::get('messages.auth.signin.fields.noAccount') }}</small></p>
+                                        <a href="{{ URL::to('/singup') }}" class="btn btn-lg btn-default btn-block">{{ Lang::get('messages.auth.signin.fields.buttonCreate') }}</a>
+                {{ Form::close() }}
             </section>
         </div>
     </section>

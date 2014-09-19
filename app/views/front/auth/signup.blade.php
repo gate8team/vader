@@ -30,7 +30,7 @@
                     <button type="submit" class="btn btn-lg btn-primary btn-block">{{ Lang::get('messages.auth.signup.fields.buttonCreate') }}</button>
                     <div class="line line-dashed"></div>
                     <p class="text-muted text-center"><small>{{ Lang::get('messages.auth.signup.fields.alreadyRegistered') }}</small></p>
-                    <a href="{{ URL::to('/singin') }}" class="btn btn-lg btn-default btn-block">{{ Lang::get('messages.auth.signup.fields.buttonEnter') }}</a>
+                    <a href="{{ URL::to('/login') }}" class="btn btn-lg btn-default btn-block">{{ Lang::get('messages.auth.signup.fields.buttonEnter') }}</a>
                 </form>
             </section>
         </div>

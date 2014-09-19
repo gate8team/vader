@@ -26,5 +26,8 @@ Route::get('users/{id}', function ($id) {
     return (Auth::guest()) ? 'guest' : 'user';
 })->where(array('id' => '[0-9]+'));
 
-Route::get('/singin', 'AuthController@signIn');
+Route::get('/login', 'AuthController@signIn');
+Route::post('/login', 'AuthController@logIn');
 Route::get('/singup', 'AuthController@signUp');
+Route::get('/logout', 'AuthController@logOut');
+Route::get('/dashboard', array('before' => 'auth', 'uses' => 'DashboardController@index'));
