@@ -83,12 +83,12 @@ return array(
 			'prefix'   => '',
 		),
 		'mongodb' => array(
-		    'driver'   => 'mongodb',
-		    'host'     => 'localhost',
-		    'port'     => 27017,
-		    // 'username' => 'username',
-		    // 'password' => 'password',
-		    'database' => 'gPartners'
+            'driver'   => 'mongodb',
+            'host'     => 'localhost',
+            'port'     => 27017,
+            'username' => '',
+            'password' => '',
+            'database' => 'dart_vader'
 		),
 
 	),
