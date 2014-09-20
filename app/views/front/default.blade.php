@@ -25,7 +25,10 @@
 </head>
 <body class="" >
     @if(Session::has('message'))
-        <p class="alert">{{ Session::get('message') }}</p>
+        <div class="alert {{ Session::get('message-class', 'alert-info') }}">
+            <button type="button" class="close" data-dismiss="alert">×</button>
+                <i class="fa fa-ban-circle"></i>{{ Session::get('message') }}
+        </div>
     @endif
 
     @yield('content')

@@ -27,6 +27,7 @@ return array(
             'fields' => array(
                 'login' => 'Логин',
                 'password' => 'Пароль',
+                'email' => 'Email',
                 'buttonEnter' => 'Войти',
                 'forgetPassword' => 'Забыли пароль?',
                 'noAccount' => 'Нет аккаунта в системе?',
@@ -39,6 +40,13 @@ return array(
             'footer' => array(
                 'description' => 'Партнерская система DVader'
             )
+        ),
+        'statuses' => array(
+            'loggedIn' => 'Вы успешно вошли в систему!',
+            'logInError' => 'Вы ввели некорректный логин/пароль. Попробуйте еще раз!',
+            'registered' => 'Вы успешно зарегистрировались в системе!',
+            'registerError' => 'Введенные данные при регистрации некоректны!',
+            'loggedOut' => 'Вы успешно вышли из системы!'
         )
     )
 );

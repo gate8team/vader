@@ -15,7 +15,7 @@
                 {{ Form::open(array('url'=>'login')) }}
                     <div class="list-group">
                         <div class="list-group-item">
-                            {{ Form::text('login', null, array('class'=>'form-control no-border', 'placeholder' => Lang::get('messages.auth.signin.fields.login'))) }}
+                            {{ Form::text('login', null, array('class'=>'form-control no-border', 'placeholder' => Lang::get('messages.auth.signin.fields.login'), 'autofocus' => 'autofocus')) }}
                         </div>
                         <div class="list-group-item">
                             {{ Form::password('password', array('class'=>'form-control no-border', 'placeholder' => Lang::get('messages.auth.signin.fields.password'))) }}
@@ -26,7 +26,7 @@
                     <div class="text-center m-t m-b"><a href="#"><small>{{ Lang::get('messages.auth.signin.fields.forgetPassword') }}</small></a></div>
                     <div class="line line-dashed"></div>
                                         <p class="text-muted text-center"><small>{{ Lang::get('messages.auth.signin.fields.noAccount') }}</small></p>
-                                        <a href="{{ URL::to('/singup') }}" class="btn btn-lg btn-default btn-block">{{ Lang::get('messages.auth.signin.fields.buttonCreate') }}</a>
+                                        <a href="{{ URL::to('signup') }}" class="btn btn-lg btn-default btn-block">{{ Lang::get('messages.auth.signin.fields.buttonCreate') }}</a>
                 {{ Form::close() }}
             </section>
         </div>
